@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
 function StateComponent() {
-    const [count, setCount] = useState(0);
+    // Defining the useState hook
+    const [count, setCount] = useState("A");
 
     // Function to increment the count
     const increment = () => {

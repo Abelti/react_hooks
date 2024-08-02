@@ -11,6 +11,7 @@ function CallbackComponent() {
     const handleClick = useCallback(() => {
         setCount(count + 1);
     }, [count]);
+
     return (
         <div>
             <div>
@@ -21,4 +22,21 @@ function CallbackComponent() {
     )
 }
 
-export default CallbackComponent
+function CallbackComponent1() {
+    const [count, setCount] = useState(0);
+
+    const handleClick = useCallback(() => {
+        setCount(count + 1);
+    }, [count]);
+
+    return (
+        <div>
+            <div>
+                <p>Count: {count}</p>
+                <Child onClick={handleClick} />
+            </div>
+        </div>
+    )
+}
+
+export default { CallbackComponent, CallbackComponent1 }
